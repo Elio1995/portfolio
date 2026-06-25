@@ -60,6 +60,7 @@ export const projects: Project[] = [
       "Zod",
       "Vitest",
     ],
+    image: "/screenshots/clarity",
     githubUrl: "https://github.com/Elio1995/clarity",
   },
   {
@@ -76,6 +77,7 @@ export const projects: Project[] = [
       "i18next",
       "Jest",
     ],
+    image: "/screenshots/pulse",
     githubUrl: "https://github.com/Elio1995/pulse",
   },
   {
@@ -128,6 +130,7 @@ export const projects: Project[] = [
     description:
       "E-commerce platform with a Next.js storefront, Contentful CMS, and NestJS microservices on GCP. I work across customer-facing features, payment flows, embeddable third-party integrations (Shopify / WordPress), and catalog / order services.",
     stack: ["TypeScript", "Next.js", "NestJS", "Tailwind", "shadcn/ui", "Turborepo", "Docker"],
+    image: "/screenshots/reservebar",
     liveUrl: "https://www.reservebar.com/",
     liveLabel: "reservebar.com",
   },
@@ -137,6 +140,7 @@ export const projects: Project[] = [
     description:
       "Publishable TypeScript SDK for the LiquidCommerce e-commerce platform. Multi-format builds (ESM, CJS, UMD, SSR), Stripe Payment Element integration, and a semantic-release pipeline auto-publishing to npm. Consumed by Next.js storefronts on top of GCP-backed NestJS microservices.",
     stack: ["TypeScript", "Rollup", "Stripe", "semantic-release", "GitHub Actions"],
+    image: "/screenshots/cloud-sdk",
     githubUrl: "https://github.com/liquidcommerce/cloud-sdk",
   },
 ];
