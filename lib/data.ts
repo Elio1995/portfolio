@@ -130,7 +130,7 @@ export const projects: Project[] = [
     description:
       "E-commerce platform with a Next.js storefront, Contentful CMS, and NestJS microservices on GCP. I work across customer-facing features, payment flows, embeddable third-party integrations (Shopify / WordPress), and catalog / order services.",
     stack: ["TypeScript", "Next.js", "NestJS", "Tailwind", "shadcn/ui", "Turborepo", "Docker"],
-    image: "/screenshots/reservebar",
+    image: "/screenshots/reservebar.png",
     liveUrl: "https://www.reservebar.com/",
     liveLabel: "reservebar.com",
   },
