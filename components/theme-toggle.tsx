@@ -35,7 +35,10 @@ export function ThemeToggle() {
       ) : (
         // Stable placeholder identical on server and on first client render.
         <>
-          <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-[hsl(var(--muted-foreground))]" />
+          <span
+            aria-hidden
+            className="h-1.5 w-1.5 rounded-full bg-[hsl(var(--muted-foreground))]"
+          />
           Theme
         </>
       )}

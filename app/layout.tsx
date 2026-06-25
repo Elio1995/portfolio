@@ -14,7 +14,9 @@ const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-fraunces",
   display: "swap",
-  axes: ["opsz", "SOFT", "WONK"],
+  // Default weight + italic axes are sufficient for the visual treatment.
+  // Optional axes (opsz / SOFT / WONK) are nice-to-have but can fail Vercel's
+  // stricter font validation; skip them.
 });
 
 const jetbrains = JetBrains_Mono({
