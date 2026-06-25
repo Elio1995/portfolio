@@ -60,7 +60,7 @@ export const projects: Project[] = [
       "Zod",
       "Vitest",
     ],
-    image: "/screenshots/clarity",
+    image: "/screenshots/clarity.png",
     githubUrl: "https://github.com/Elio1995/clarity",
   },
   {
