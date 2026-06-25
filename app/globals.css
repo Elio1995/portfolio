@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, "Iowan Old Style", "Palatino Linotype",
+    "URW Palladio L", serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    monospace;
+}
+
+@layer base {
+  /*
+   * Warm-editorial palette. Cream + ink + saturated amber accent.
+   * Deliberately not the 2024 default (Inter + cool blue) — picks a
+   * specific position and owns it.
+   */
+  :root {
+    --background: 40 25% 98%;
+    --foreground: 20 10% 8%;
+    --muted: 40 15% 94%;
+    --muted-foreground: 25 6% 38%;
+    --border: 35 14% 86%;
+    --card: 40 22% 97%;
+    --accent: 22 84% 40%;
+    --accent-foreground: 40 33% 98%;
+  }
+
+  .dark {
+    --background: 25 12% 7%;
+    --foreground: 40 25% 92%;
+    --muted: 25 10% 15%;
+    --muted-foreground: 35 6% 58%;
+    --border: 25 8% 20%;
+    --card: 25 12% 10%;
+    --accent: 28 90% 60%;
+    --accent-foreground: 25 12% 7%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.65;
+    font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1;
+  }
+
+  @media (min-width: 640px) {
+    body {
+      font-size: 17px;
+    }
+  }
+
+  /* Editorial display type — used by the hero name and section H2s. */
+  .font-display {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    font-feature-settings: "ss01" 1, "ss02" 1, "ss03" 1, "calt" 1, "liga" 1;
+  }
+
+  .font-display em {
+    font-style: italic;
+    font-variation-settings: "ital" 1;
+  }
+
+  ::selection {
+    background-color: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+  }
+
+  ::-moz-selection {
+    background-color: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+  }
+
+  /* Underline links from prose by default — feels editorial. */
+  a {
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+}
+
+/* ─── Custom utilities ─────────────────────────────────────────────── */
+
+@utility text-muted {
+  color: hsl(var(--muted-foreground));
+}
+
+@utility text-accent {
+  color: hsl(var(--accent));
+}
+
+@utility bg-card {
+  background-color: hsl(var(--card));
+}
+
+@utility bg-accent {
+  background-color: hsl(var(--accent));
+}
+
+@utility bg-muted {
+  background-color: hsl(var(--muted));
+}
+
+@utility border-default {
+  border-color: hsl(var(--border));
+}
+
+/*
+ * Mono section label — used as the small uppercase header above each
+ * section's display title. Pattern stolen from print magazines.
+ */
+@utility section-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
